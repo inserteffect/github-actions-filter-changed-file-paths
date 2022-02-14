@@ -3,6 +3,7 @@ const github = require("@actions/github");
 
 try {
   const changedFiles = core.getInput("changedFiles");
+  console.log(changedFiles);
   const filteredPaths = Array.from(
     new Set(
       changedFiles.map((e) => {
