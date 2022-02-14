@@ -4,7 +4,7 @@ inputs:
   changedFiles: # id of input
     description: "Changed files"
     required: true
-    default: []
+    default: ""
 outputs:
   filteredPaths: # id of output
     description: "Filtered paths"
