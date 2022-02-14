@@ -1,0 +1,13 @@
+name: "Filter paths"
+description: "Filters changed files according to docker image builds and releases"
+inputs:
+  changedFiles: # id of input
+    description: "Changed files"
+    required: true
+    default: []
+outputs:
+  filteredPaths: # id of output
+    description: "Filtered paths"
+runs:
+  using: "node16"
+  main: "index.js"
