@@ -7,7 +7,7 @@ try {
   const filteredPaths = Array.from(
     new Set(
       JSON.parse(changedFiles).map((e) => {
-        return e.replace(e.split("/").pop(), "");
+        return e.replace(e.split("/").pop(), "").slice(0, -1);
       })
     )
   );
