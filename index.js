@@ -3,11 +3,12 @@ const github = require("@actions/github");
 
 try {
   const changedFiles = core.getInput("changedFiles");
-  console.log(changedFiles);
+  const depth = core.getInput("depth");
+
   const filteredPaths = Array.from(
     new Set(
       JSON.parse(changedFiles).map((e) => {
-        return e.replace(e.split("/").pop(), "").slice(0, -1);
+        return e.split("/").slice(0, depth).join("/");
       })
     )
   );

@@ -5,6 +5,10 @@ inputs:
     description: "Changed files"
     required: true
     default: ""
+  depth: # id of input
+    description: "Depth of needed directories"
+    required: false
+    default: -1
 outputs:
   filteredPaths: # id of output
     description: "Filtered paths"
