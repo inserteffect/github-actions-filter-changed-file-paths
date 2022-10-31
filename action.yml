@@ -9,6 +9,10 @@ inputs:
     description: "Depth of needed directories"
     required: false
     default: -1
+  exclude: # exclude paths
+    description: "Directories to exclude"
+    required: false
+    default: "[]"
 outputs:
   filteredPaths: # id of output
     description: "Filtered paths"
